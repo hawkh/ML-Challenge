@@ -37,4 +37,7 @@ The workflow includes:
   - `pandas`
   - `numpy`
   - `sklearn`
-
+## Future Improvements
+- Experiment with advanced pre-trained models like RoBERTa or DeBERTa.
+- Handle class imbalance with techniques like oversampling or weighted loss functions.
+- Extend the model to support multiclass classification for other types of text.
