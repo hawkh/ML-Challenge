@@ -1,15 +1,40 @@
-# AI Text Detector
+# BERT-Based AI Content Classification
 
-A full-stack application that uses a fine-tuned BERT model to detect AI-generated text.
+This project leverages a BERT-based deep learning model to classify text articles as either **AI-generated** or **human-written**. Using PyTorch and the Hugging Face `transformers` library, the project implements fine-tuning of a pre-trained BERT model for binary classification.
 
-## Setup
+---
 
-### Backend
-1. Navigate to the backend directory: `cd backend`
-2. Install dependencies: `npm install`
-3. Start the server: `npm run dev`
+## Overview
 
-### Frontend
-1. Navigate to the frontend directory: `cd frontend`
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
+The primary goal of this project is to classify text data into two categories:
+- **AI-generated**
+- **Human-written**
+
+The workflow includes:
+1. Tokenizing text data using a BERT tokenizer.
+2. Defining a PyTorch dataset and data loader for text and labels.
+3. Building and training a custom BERT-based classifier.
+4. Evaluating the model using stratified cross-validation.
+5. Saving the trained model for deployment or further analysis.
+
+---
+
+## Features
+
+- **Pre-trained BERT Model:** Fine-tunes `bert-base-uncased` for text classification.
+- **Custom Dataset Class:** Implements a PyTorch-compatible dataset class for efficient data handling.
+- **Cross-Validation:** Uses Stratified K-Fold cross-validation to ensure robust evaluation.
+- **Evaluation Metrics:** Calculates accuracy, F1 score, precision, and recall.
+
+---
+
+## Requirements
+
+- Python 3.7+
+- Libraries:
+  - `torch`
+  - `transformers`
+  - `pandas`
+  - `numpy`
+  - `sklearn`
+
